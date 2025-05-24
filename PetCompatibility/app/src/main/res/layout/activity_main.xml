@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFDE7"
+    android:padding="16dp">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pet Compatibility Calculator"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        android:textColor="#000000"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    <TextView
+        android:id="@+id/txtSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Select your lifestyle"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitle"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageButton
+        android:id="@+id/btnFriendly"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:background="@drawable/image_button_bg"
+        android:contentDescription="Friendly"
+        android:scaleType="centerCrop"
+        android:src="@drawable/friendly"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.448"
+        app:layout_constraintStart_toEndOf="@+id/btnIntrovert"
+        app:layout_constraintTop_toTopOf="@+id/btnIntrovert"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageButton
+        android:id="@+id/btnIntrovert"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/image_button_bg"
+        android:contentDescription="Introvert"
+        android:scaleType="centerCrop"
+        android:src="@drawable/introvert"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.071"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnHomebody"
+        app:layout_constraintVertical_bias="0.03" />
+
+    <ImageButton
+        android:id="@+id/btnAdventurous"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginBottom="408dp"
+        android:background="@drawable/image_button_bg"
+        android:contentDescription="Adventurous"
+        android:scaleType="centerCrop"
+        android:src="@drawable/adventure"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.448"
+        app:layout_constraintStart_toEndOf="@+id/btnHomebody"
+        app:layout_constraintTop_toTopOf="@+id/btnHomebody"
+        app:layout_constraintVertical_bias="0.017" />
+
+    <ImageButton
+        android:id="@+id/btnHomebody"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/image_button_bg"
+        android:contentDescription="Homebody"
+        android:scaleType="centerCrop"
+        android:src="@drawable/homebody"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtSubtitle"
+        app:layout_constraintVertical_bias="0.008" />
+
+    <Button
+        android:id="@+id/btnFindPet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#D32F2F"
+        android:text="Find My Ideal Pet"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.677" />
+
+    <TextView
+        android:id="@+id/txtResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="18sp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/btnFindPet"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"/>
+
+    <ImageView
+        android:id="@+id/imgPetResult"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:background="@drawable/image_button_bg"
+        android:scaleType="centerCrop"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/txtResult"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="16dp"
+        android:layout_height="20dp"
+        android:text="+"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnIntrovert"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnHomebody"
+        app:layout_constraintVertical_bias="0.552" />
+
+    <ImageButton
+        android:id="@+id/infoButton"
+        android:layout_width="60dp"
+        android:layout_height="81dp"
+        android:layout_margin="16dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="Info Button"
+        android:scaleType="centerInside"
+        android:src="@drawable/logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.975" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
